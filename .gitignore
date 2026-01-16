@@ -1,0 +1,4 @@
+/tools/android/
+/build/
+/*.apk
+/*.keystore
