@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.bronbron.nativeplatform"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bronbron.nativeplatform">
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34" />
+
+    <application
+        android:label="NativePlatform"
+        android:hasCode="false"
+        android:allowBackup="false">
+
+        <activity
+            android:name="android.app.NativeActivity"
+            android:exported="true"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="native_activity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
 </manifest>
